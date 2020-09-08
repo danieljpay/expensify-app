@@ -18,5 +18,3 @@ export default () => {
 
     return store;
 }; 
-
-

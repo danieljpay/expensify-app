@@ -1,10 +1,32 @@
+/*
+notes {
+    s-size: 1.2rem,
+    m-size: 1.6rem,
+    l-size: 3.2rem,
+    xl-size: 4.8rem,
+    desktop-breackpoint: 45rem,
+    dark-grey: #333333,
+    grey: #666,
+    blue: #007FFF,
+    dark-blue: #364051,
+    off-white: #f7f7f7,
+    font-size-large: 1.8rem,
+    font-size-small: 1.4rem
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
 html  {
     font-size: 62.5%
 }
 
 body {
+    color: #333333;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 button {
@@ -17,4 +39,271 @@ button:disabled {
 
 .is-active {
     font-weight: bold;
+}
+
+/* ***********************      components        **************** */
+
+/*****  loginPage *****/
+.box-layout {
+    align-items: center;
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.box-layout__box {
+    background: hsla(0, 0%, 100%, 0.85);
+    border-radius: 3px;
+    padding: 3.2rem 1.6rem;
+    text-align: center;
+    width: 25rem;
+}
+
+.box-layout__title {
+    margin: 0 0 1.6rem 0;
+    line-height: 1;
+}
+
+/****** button *****/
+
+.button {
+    background-color: #007FFF;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 1.2rem;
+    text-decoration: none;
+}
+
+.button--link {
+    background: none;
+}
+
+.button--secondary {
+    background: #888;
+}
+
+/***** header ******/
+
+.header {
+    background: #10274e;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+}
+
+.header__title {
+    color: white;
+    text-decoration: none;
+}
+
+.header__title-h1 {
+    margin: 0;
+}
+
+/***** content containter ******/
+
+.content-container {
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    max-width: 80rem;
+}
+
+/***** page header *****/
+
+.page-header {
+    background: #f7f7f7;
+    margin-bottom: 3.2rem;
+    padding: 3.2rem 0;
+}
+
+.page-header__actions {
+    margin-top: 1.6rem;
+}
+
+.page-header__title {
+    font-weight: 300;
+    margin: 0;
+}
+
+span {
+    font-weight: 700;
+}
+
+/*****  ExpenseListFilters *****/
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+}
+
+.input-group__item {
+    margin-bottom: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+/***** inputs *****/
+
+.text-input, .select, .textarea {
+    border: 1px solid #cacccd;
+    height: 50px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 1.2rem;
+}
+
+.textarea {
+    height: 10rem;
+}
+
+/***** form *****/
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form > * {
+    margin-bottom: 1.6rem;
+}
+
+.form__error {
+    margin: 0 0 1.6rem 0;
+    font-style: italic;
+}
+
+/***** Visibility *****/
+
+.show-for-mobile {
+
+}
+
+.show-for-desktop {
+    
+}
+
+/****** list ******/
+
+.list-header {
+    background: #f7f7f7;
+    border: 1px solid hsla(0, 1%, 47%, 0.534); 
+    color: #333333; /**** modified *****/
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.6rem;
+}
+
+.list-body {
+    margin-bottom: 1.6rem;
+}
+
+.list-item {
+    border: 1px solid hsla(0, 1%, 47%, 0.534);
+    border-top: none;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    text-decoration: none;
+    transition: background .3s ease;
+}
+
+.list-item:hover {
+    background:  #f7f7f7;
+}
+
+.list-item--message {
+    align-items: center;
+    color: #666;
+    justify-content: center;
+    padding: 1.6rem;
+}
+
+.list-item--message:hover {
+    background: none;
+}
+
+.list-item__title {
+    margin: 0;
+    word-break: break-all;
+}
+
+.list-item__sub-title {
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.list-item__data {
+    margin: 1.2rem 0 0 0;
+}
+
+/***** loader*****/
+
+.loader {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.loader__image {
+    height: 6rem;
+    width: 6rem;
+}
+
+/***** media *****/
+
+@media (min-width: 45rem) {
+
+    .input-group {
+        flex-direction: row;
+        margin-bottom: 1.2rem;
+    }
+
+    .input-group__item {
+        margin: 0 1.2rem 0 0;
+    }
+
+    .show-for-mobile {
+        display: none;
+    }
+
+    .list-item {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.6rem;
+    }
+
+    .list-item--message {   /* extra to fix the message at center */
+        flex-direction: column;
+    }
+
+    .list-item__data {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+
+    .list-body {
+        margin-bottom: 3.2rem;
+    }
+
+}
+
+@media (max-width: 45rem) {
+    .show-for-desktop {
+        display: none;
+    }
 }
