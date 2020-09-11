@@ -124,7 +124,7 @@ button:disabled {
 .page-header {
     background: #f7f7f7;
     margin-bottom: 3.2rem;
-    padding: 3.2rem 0;
+    padding: 2.5rem 0;
 }
 
 .page-header__actions {
@@ -138,6 +138,10 @@ button:disabled {
 
 span {
     font-weight: 700;
+}
+
+.page-header__count {
+    margin: 0;
 }
 
 /*****  ExpenseListFilters *****/
